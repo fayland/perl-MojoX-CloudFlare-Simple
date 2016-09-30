@@ -1,5 +1,5 @@
 {
-   "abstract" : "Blah blah blah",
+   "abstract" : "simple cloudflare client without wrapper",
    "author" : [
       "Fayland Lam <fayland@gmail.com>"
    ],
@@ -37,6 +37,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Mojo::UserAgent" : "0",
             "perl" : "5.008005"
          }
       },
@@ -47,6 +48,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/fayland/perl-MojoX-CloudFlare-Simple/issues"
+      },
+      "homepage" : "https://github.com/fayland/perl-MojoX-CloudFlare-Simple",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/fayland/perl-MojoX-CloudFlare-Simple.git",
+         "web" : "https://github.com/fayland/perl-MojoX-CloudFlare-Simple"
+      }
+   },
    "version" : "0.01"
 }
 
