@@ -7,7 +7,7 @@ use Carp qw/croak/;
 use Mojo::Base -base;
 use Mojo::UserAgent;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 has 'ua' => sub {
     my $ua = Mojo::UserAgent->new;
