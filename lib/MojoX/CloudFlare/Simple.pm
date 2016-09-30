@@ -47,7 +47,7 @@ sub request {
     my $tx = $self->ua->build_tx($method => $url => $header => @extra );
     $tx = $self->ua->start($tx);
 
-    return $tx->res->json if $tx->res->headers->content_type =~ /json/;
+    return $tx->res->json if ($tx->res->headers->content_type || '') =~ /json/;
 
     my $err = $tx->error;
     croak "$err->{code} response: $err->{message}" if $err->{code};
