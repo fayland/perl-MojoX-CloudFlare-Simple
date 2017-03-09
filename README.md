@@ -4,23 +4,25 @@ MojoX::CloudFlare::Simple - simple cloudflare client without wrapper
 
 # SYNOPSIS
 
-    use MojoX::CloudFlare::Simple;
+```perl
+use MojoX::CloudFlare::Simple;
 
-    my $cloudflare = MojoX::CloudFlare::Simple->new(
-        email => 'blabla@blabla.com',
-        key   => 'secretkeyblabla',
-    );
+my $cloudflare = MojoX::CloudFlare::Simple->new(
+    email => 'blabla@blabla.com',
+    key   => 'secretkeyblabla',
+);
 
-    my $zones = $cloudflare->request('GET', 'zones');
-    say Dumper(\$zones);
+my $zones = $cloudflare->request('GET', 'zones');
+say Dumper(\$zones);
 
-    my $result = $cloudflare->request('DELETE', "zones/$zone_id/purge_cache", {
-        files => [
-            'http://bsportsfan.com/',
-            'https://assets.bsportsfan.com/images/team/s/34953.png'
-        ]
-    });
-    say Dumper(\$result);
+my $result = $cloudflare->request('DELETE', "zones/$zone_id/purge_cache", {
+    files => [
+        'http://bsportsfan.com/',
+        'https://assets.bsportsfan.com/images/team/s/34953.png'
+    ]
+});
+say Dumper(\$result);
+```
 
 # DESCRIPTION
 
