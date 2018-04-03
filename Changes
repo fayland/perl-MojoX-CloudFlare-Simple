@@ -1,6 +1,7 @@
 Revision history for MojoX-CloudFlare-Simple
 
 {{$NEXT}}
+        - fix double //
 
 0.02  2016-09-30 22:44:21 CST
         - fix warnings

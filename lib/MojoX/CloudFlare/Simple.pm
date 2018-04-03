@@ -15,7 +15,7 @@ has 'ua' => sub {
     return $ua;
 };
 
-has 'url_prefix' => sub { 'https://api.cloudflare.com/client/v4/' };
+has 'url_prefix' => sub { 'https://api.cloudflare.com/client/v4' };
 has 'email';
 has 'key';
 has 'user_service_key';
