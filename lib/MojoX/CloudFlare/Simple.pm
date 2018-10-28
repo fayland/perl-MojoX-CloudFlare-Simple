@@ -48,6 +48,7 @@ sub request {
     $tx = $self->ua->start($tx);
 
     return $tx->res->json if ($tx->res->headers->content_type || '') =~ /json/;
+    return $tx->res->body if ($tx->res->headers->content_type || '') =~ /application\/octet-stream/;
 
     my $err = $tx->error;
     croak "$err->{code} response: $err->{message}" if $err->{code};
